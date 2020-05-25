@@ -1,2 +1,2 @@
-# bundster.github.io
+# Bundster.github.io
 my website
