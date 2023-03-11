@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
+    <head>
      <title>BUNDST.COM | THE BUNDSTERVERSE</title>
   </head>
+<style>
+  
+.rangeslider{
+    width: 50%;
+}
+  
+.myslider {
+    -webkit-appearance: none;
+    background: #FCF3CF  ;
+    width: 50%;
+    height: 20px;
+    opacity: 2;
+   }
+  
+  
+.myslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: #34495E  ;
+    width: 5%;
+    height: 20px;
+}
+  
+  
+.myslider:hover {
+    opacity: 1;
+}
+  
+</style>
 <body>
    <a href="./indexdeluxe.html">BUNDST.COM</a> | <a href="./aboutdeluxe.html">What? Who?</a> | <a href="./bundsterversedeluxe.html">The Bundsterverse</a>
    <br>
@@ -21,9 +50,22 @@
   <label>How Many Cats Do You Own?</label>
   <br>
   <br>
-  0<input id="catamount" name="catamount" type="range">4+
+  0<input id="catamount" name="catamount" type="range"  min="1" max="4100" value="0">4100
+  <p>Cat Amount: <span id="demo"></span></p>
   <br>
   <a href="./bundsterverse.html">Return to Regular Bundsterverse</a>
+  
 
-   </body>
+  
+<script>
+var rangeslider = document.getElementById("catamount");
+var output = document.getElementById("demo");
+output.innerHTML = rangeslider.value;
+  
+rangeslider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+  
+</body>
 </html>
